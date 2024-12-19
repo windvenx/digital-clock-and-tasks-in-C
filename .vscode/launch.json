@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Запуск программы C",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": true, // Включите, чтобы программа запускалась в отдельной консоли
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb", // Укажите путь к gdb (Linux/Mac) или MinGW gdb (Windows)
+        "setupCommands": [
+          {
+            "description": "Включить расширенные команды",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      }
+    ]
+  }
+  

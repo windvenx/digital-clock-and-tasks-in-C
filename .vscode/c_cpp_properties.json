@@ -1,0 +1,15 @@
+{
+    "configurations": [
+      {
+        "name": "GCC",
+        "includePath": ["${workspaceFolder}/**"],
+        "defines": [],
+        "compilerPath": "/usr/bin/gcc", // Укажите путь к компилятору gcc
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "linux-gcc-x64" // Измените на "windows-gcc-x64", если используете Windows
+      }
+    ],
+    "version": 4
+  }
+  
