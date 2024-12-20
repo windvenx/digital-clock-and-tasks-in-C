@@ -2,7 +2,7 @@
 
 // int main() {
 //     int arr[] = {1, 3, 4, 5}; 
-//     int size = sizeof(arr) / sizeof(arr[0]); 
+    // int size = sizeof(arr) / sizeof(arr[0]); 
 //     int is_consecutive = 1; 
 
 //     for (int i = 1; i < size; i++) {
@@ -267,39 +267,188 @@
 // }
 
 
+// #include <stdio.h>
+// int main()
+// {
+//     const int size = 5;
+//     int arr[5] = { 1,2,3,4,5 };
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%3d", arr[size - i-1]);
+//     }
+//     printf("\n");
+//     return 0;
+// }
 
 
 
-#include <stdio.h>
-#include <unistd.h> 
-#include <stdlib.h> 
 
-int main() {
-    int h, m, s; 
-    h = m = s = 0;
 
-    while (1) {
-        system("clear");
 
-        printf("%02d : %02d : %02d\n", h, m, s);
-        fflush(stdout);
+// #include <stdlib.h>
+// #include <stdio.h>
 
-        s++;
+// // Return a dynamically allocated int array
+// // Return array will be freed by the tester
 
-        if (s == 60) {
-            m++;
-            s = 0;
-        }
-        if (m == 60) {
-            h++;
-            m = 0;
-        }
-        if (h == 24) {
-            h = 0;
-        }
+// int *reverse_list(const int *array, size_t length) {
+//     if (array == NULL || length == 0) {
+//         return NULL; // Проверка на пустой массив
+//     }
 
-        sleep(1);
-    }
+//     // Выделяем память для результирующего массива
+//     int *reversed = (int *)malloc(length * sizeof(int));
+//     if (reversed == NULL) {
+//         return NULL; // Ошибка выделения памяти
+//     }
 
-    return 0;
-}
+//     // Заполняем массив в обратном порядке
+//     for (size_t i = 0; i < length; i++) {
+//         reversed[i] = array[length - i - 1];
+//     }
+
+//     return reversed;
+// }
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[4] = {1,2,3,4};
+//     int sum = 0;
+//     for(int i = 0;i<4;i++)
+//     {
+//         sum += arr[i];
+//         printf("%d * ",sum);
+//     }
+//     return 0;
+// }
+
+
+
+// #include <stddef.h>
+// #include <stdio.h> // Добавляем заголовочный файл для printf
+
+// int main(size_t size, const int arr[size]) {
+//     int product = 1;
+
+//     // Вывод элементов массива с символом '*'
+//     for (size_t i = 0; i < size; i++) // Используем size_t для i
+//     {
+//         printf("%d", arr[i]); // Печатаем число
+//         if (i < size - 1) // Добавляем '*' только между числами
+//         {
+//             printf(" * ");
+//         }
+//         product *= arr[i]; // Умножаем на текущее значение
+//     }
+
+//     // Печать результата
+//     printf(" = %d\n", product);
+
+//     return product; // Возвращаем произведение
+// }
+
+
+
+
+// int getAge(const char *inputString)
+// {
+//     // return correct age (int). Happy coding :)
+//     return inputString[0] - '0';
+// }
+
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char *a = "str";
+//     for(int i = 0;i<3;i++)
+//     {
+//         printf("%s",a[i]);
+//     }
+//     return 0;
+// }
+
+
+
+// char *double_char(const char *string, char *doubled) {
+//     int size = strlen(string); // Определяем длину строки
+//     int j = 0; // Индекс для заполнения результирующей строки
+
+//     for (int i = 0; i < size; i++) {
+//         doubled[j++] = string[i]; // Добавляем текущий символ
+//         doubled[j++] = string[i]; // Добавляем тот же символ снова
+//     }
+
+//     doubled[j] = '\0'; // Завершаем результирующую строку нулевым символом
+//     return doubled; // Возвращаем результирующую строку
+// }
+
+
+// int unusual_five()
+//     {return 'f'%'a';}
+
+
+// int unusual_five() {
+//   return sizeof "five";
+// }
+
+
+
+
+// #include <ctype.h>
+
+// char *makeUpperCase(char *str) {
+//     char *original_str = str;  // Сохраняем указатель на начало строки
+    
+//     while (*str) {
+//         *str = toupper((unsigned char)*str);  // Преобразуем символ в верхний регистр
+//         str++;
+//     }
+
+//     return original_str;  // Возвращаем указатель на начало строки
+// }
+
+
+
+
+
+
+
+// #include <stdio.h>
+// #include <unistd.h> 
+// #include <stdlib.h> 
+
+// int main() {
+//     int h, m, s; 
+//     h = m = s = 0;
+
+//     while (1) {
+//         system("clear");
+
+//         printf("%02d : %02d : %02d\n", h, m, s);
+//         fflush(stdout);
+
+//         s++;
+
+//         if (s == 60) {
+//             m++;
+//             s = 0;
+//         }
+//         if (m == 60) {
+//             h++;
+//             m = 0;
+//         }
+//         if (h == 24) {
+//             h = 0;
+//         }
+
+//         sleep(1);
+//     }
+
+//     return 0;
+// }
