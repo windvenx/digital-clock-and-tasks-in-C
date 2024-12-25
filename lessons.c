@@ -283,6 +283,36 @@
 
 
 
+// #include <stdio.h>
+// #include <string.h>
+
+// void reverseString(char str[]) {
+//     int len = strlen(str); 
+//     int start = 0, end = len - 1;
+
+//     while (start < end) {
+//         char temp = str[start];
+//         str[start] = str[end];
+//         str[end] = temp;
+//         start++;
+//         end--;
+//     }
+// }
+
+
+
+
+// int main() {
+//     char str[] = "Hello, World!";
+//     printf("Original string: %s\n", str);
+
+//     reverseString(str);
+
+//     printf("Reversed string: %s\n", str);
+//     return 0;
+// }
+
+
 
 
 // #include <stdlib.h>
@@ -361,6 +391,18 @@
 
 
 
+// int nbYear(int p0, double percent, int aug, int p) {
+//     int years = 0;
+//     while (p0 < p) {
+//         p0 += p0 * percent / 100 + aug;  // Рост населения за год
+//         years++;  // Увеличиваем количество лет
+//     }
+//     return years;
+// }
+
+
+
+
 // #include <stdio.h>
 
 // int main()
@@ -412,6 +454,188 @@
 
 //     return original_str;  // Возвращаем указатель на начало строки
 // }
+
+
+
+
+// unsigned bin_to_decimal(const char *binary)
+// {
+// 	int decimal = 0;
+//     int length = strlen(binary);
+    
+//     for (int i = 0; i < length; i++) {
+//         // Если символ не '0' или '1', возвращаем ошибку
+//         if (binary[i] != '0' && binary[i] != '1') {
+//             return -1; // Ошибка ввода
+//         }
+
+//         // Сдвигаем значение влево на 1 разряд (умножаем на 2) и добавляем текущую цифру
+//         decimal = decimal * 2 + (binary[i] - '0');
+//     }
+
+//     return decimal;
+// }
+
+
+
+
+// #include <stdbool.h>
+// #include <stddef.h>
+
+// bool small_enough(int *arr, size_t length, int limit)
+// {
+//     for (size_t i = 0; i < length; i++) {
+//         if (arr[i] > limit) {  // Если хотя бы один элемент больше лимита
+//             return false;
+//         }
+//     }
+//     return true;  // Все элементы меньше или равны лимиту
+// }
+
+
+
+// #include <stdio.h>
+
+// // assign function results to provided array
+// void between(int a, int b, int *integers) {
+//     // Заполнение массива значениями
+//     for (int i = a; i <= b; i++) {
+//         integers[i - a] = i;  // Заполняем массив integers значениями от a до b
+//     }
+// }
+
+
+
+// #include <stdio.h>
+// #include <string.h>
+// #include <math.h>
+
+// // Функция для преобразования шестнадцатеричной строки в десятичное число
+// int hex_to_decimal(const char *hex) {
+//     int decimal = 0;
+//     int len = strlen(hex);
+    
+//     for (int i = 0; i < len; i++) {
+//         char c = hex[i];
+//         int value;
+
+//         // Проверяем, является ли символ цифрой
+//         if (c >= '0' && c <= '9') {
+//             value = c - '0';  // Преобразуем символ цифры в соответствующее число
+//         }
+//         // Проверяем, является ли символ буквой A-F (шестнадцатеричные буквы)
+//         else if (c >= 'A' && c <= 'F') {
+//             value = c - 'A' + 10;  // Преобразуем букву в число (A=10, B=11, ..., F=15)
+//         }
+//         // Проверяем на маленькие буквы a-f
+//         else if (c >= 'a' && c <= 'f') {
+//             value = c - 'a' + 10;  // Преобразуем букву в число (a=10, b=11, ..., f=15)
+//         } else {
+//             printf("Ошибка: неверный символ в шестнадцатеричной строке\n");
+//             return -1; // Возвращаем ошибку
+//         }
+
+//         // Добавляем к десятичному числу, с учетом позиции
+//         decimal += value * pow(16, len - i - 1);
+//     }
+
+//     return decimal;
+// }
+
+// int main() {
+//     const char *hex = "1A3"; // Пример шестнадцатеричной строки
+//     int decimal = hex_to_decimal(hex);
+    
+//     if (decimal != -1) {
+//         printf("Шестнадцатеричное число %s в десятичной системе: %d\n", hex, decimal);
+//     }
+    
+//     return 0;
+// }
+
+
+
+
+// #include <stdbool.h>
+
+// bool xor(bool a, bool b) {
+//     return a != b;
+// }
+
+
+
+
+// #include <stdio.h>
+
+// char* position(char alphabet)
+// {
+//   static char ret[22+3] = "";
+  
+//   if(alphabet >= 'A' && alphabet <= 'Z'){ /* if alphabet is mayus char */
+//     sprintf(ret, "Position of alphabet: %d", alphabet - 'A' + 1);
+//   } else if(alphabet >= 'a' && alphabet <= 'z'){ 
+//     sprintf(ret, "Position of alphabet: %d", alphabet - 'a' + 1);
+//   }
+  
+//   return ret;
+// }
+
+
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <ctype.h>
+// #include <string.h>
+
+// // Функция преобразует имя: первая буква - заглавная, остальные - строчные
+// void formatName(const char *input, char *output) {
+//     size_t len = strlen(input);
+//     if (len > 0) {
+//         output[0] = toupper(input[0]); // Первая буква заглавная
+//         for (size_t i = 1; i < len; ++i) {
+//             output[i] = tolower(input[i]); // Остальные строчные
+//         }
+//         output[len] = '\0';
+//     } else {
+//         strcpy(output, "World"); // Если имя пустое, используем "World"
+//     }
+// }
+
+// // Функция возвращает приветствие в динамически выделенной строке
+// char *hello(const char *name) {
+//     char formattedName[100]; // Временный буфер для форматированного имени
+//     formatName(name, formattedName);
+
+//     // Вычисляем длину строки для динамического выделения памяти
+//     size_t messageLength = strlen("Hello, !") + strlen(formattedName) + 1;
+//     char *result = malloc(messageLength);
+
+//     if (result) {
+//         snprintf(result, messageLength, "Hello, %s!", formattedName);
+//     }
+//     return result;
+// }
+
+
+
+
+// #include <stdlib.h> // Для функции abs()
+
+// int find_difference(const int a[3], const int b[3]) {
+//     int r = 1;
+//     int r2 = 1;
+
+//     for (int i = 0; i < 3; i++) {
+//         r *= a[i];
+//         r2 *= b[i];
+//     }
+
+//     int r3 = r - r2;
+
+//     return abs(r3); // Возвращаем абсолютное значение разности
+// }
+
 
 
 
