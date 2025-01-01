@@ -639,7 +639,20 @@
 
 
 
+// #include <stdio.h>
+// #include <string.h>
 
+// int main (void){
+//     char str[64] = "fgs";
+//     char str1[64] = "sfg";
+//     int size = strlen(str);
+//     int size1 = strlen(str1);
+//     if(size != size1){
+//     printf("hello world");
+
+//     }
+//     return 0; 
+// }
 
 
 
@@ -676,3 +689,94 @@
 
 //     return 0;
 // }
+
+
+
+
+
+// #include <stdio.h>
+// #include <string.h>
+
+// void sortString(char *str) {
+//     int len = strlen(str);
+//     for (int i = 0; i < len - 1; i++) {
+//         for (int j = i + 1; j < len; j++) {
+//             if (str[i] > str[j]) {
+//                 char temp = str[i];
+//                 str[i] = str[j];
+//                 str[j] = temp;
+//             }
+//         }
+//     }
+// }
+
+// int main(void) {
+//     char str[64] = "fgs";
+//     char str1[64] = "sfg";
+
+//     int size = strlen(str);
+//     int size1 = strlen(str1);
+
+//     if (size != size1) {
+//         printf("Строки не являются анаграммами.\n");
+//         return 0;
+//     }
+
+//     sortString(str);
+//     sortString(str1);
+
+//     if (strcmp(str, str1) == 0) {
+//         printf("Строки являются анаграммами.\n");
+//     } else {
+//         printf("Строки не являются анаграммами.\n");
+//     }
+
+//     return 0;
+// }
+    
+
+
+// #include <stdio.h>
+ 
+// int factorial(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     return n + factorial(n - 1);
+// }
+  
+// int main(void)
+// {
+//     int factorial4 = factorial(4);  // 24
+//     int factorial5 = factorial(5);  // 120
+//     int factorial6 = factorial(6);  // 720
+ 
+//     printf("factorial of 4: %d \n", factorial4);
+//     printf("factorial of 5: %d \n", factorial5);
+//     printf("factorial of 6: %d \n", factorial6);
+      
+//     return 0;
+// }
+
+
+
+
+#include <stddef.h>
+
+const char *odd_or_even(const int *v, size_t sz) {
+ int sum = 0;
+
+    // Суммируем элементы массива
+    for (size_t i = 0; i < sz; i++) {
+        sum += v[i];
+    }
+
+    // Проверяем четность суммы
+    if (sum % 2 == 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
+}
